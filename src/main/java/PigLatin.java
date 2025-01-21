@@ -40,22 +40,26 @@ public class PigLatin {
         return -1;
     }
 
-public String pigLatin(String sWord) {
-        //precondition: sWord is a valid String of length greater than 0
-        //postcondition: returns the pig latin equivalent of sWord
-        // more code should go here
-	    int temp = findFirstVowel(sWord);
- 	//System.out.println(temp);
- 	if(temp == -1) {// no vowels
-    		return sWord + "ay";
-  	}
-  	if(temp == 0){ //vowel is first letter
-      		return sWord+"way";
-    	}
+public String pigLatin(String sWord)
+//precondition: sWord is a valid String of length greater than 0
+//postcondition: returns the pig latin equivalent of sWord
+{
+ int temp = findFirstVowel(sWord);
+ //System.out.println(temp);
+ if(sWord.substring(0,2).equals("qu")){
+   return sWord.substring(2)+"quay";
+ }
+  if(temp == -1) // no vowels
+  {
+    return sWord + "ay";
+  }
+  if(temp == 0){ //vowel is first letter
+      return sWord+"way";
+    }
   if(temp>0){ // start with vowel, then add starting consonants and then "ay"
     return sWord.substring(temp)+sWord.substring(0,temp)+"ay";
   }
+  
     return "ERROR!";
   
-    }
-}//end PigLatin function
+}//end piglatin function
