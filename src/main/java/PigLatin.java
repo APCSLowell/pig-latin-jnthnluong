@@ -40,7 +40,7 @@ public class PigLatin {
         return -1;
     }
 
-    public String pigLatin(String sWord) {
+public String pigLatin(String sWord) {
         //precondition: sWord is a valid String of length greater than 0
         //postcondition: returns the pig latin equivalent of sWord
         // more code should go here
@@ -58,4 +58,4 @@ public class PigLatin {
     return "ERROR!";
   
     }
-}//end PigLatin class
+}//end PigLatin function
