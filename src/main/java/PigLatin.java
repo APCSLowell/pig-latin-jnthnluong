@@ -63,5 +63,5 @@ public String pigLatin(String sWord)
   }
   
     return "ERROR!";
-  
-}//end piglatin function
+}
+}//end piglatin class
